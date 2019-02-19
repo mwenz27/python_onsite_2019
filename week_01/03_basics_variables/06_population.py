@@ -9,3 +9,17 @@ for the next 3 years (without a leap year).
 Let's say the current population is 380,123,456.
 
 '''
+
+year = 60*60*60*24*365 # total time seconds, minutes, hours, hours in a day, days in a year
+birth = 6
+death = 12
+immigrates = 40
+current_population = 380123456
+
+total_population = round(3*year/ (birth-death+immigrates))
+difference = current_population - total_population
+
+print(f'In three years the total population is {total_population}')
+
+print(difference)
+
