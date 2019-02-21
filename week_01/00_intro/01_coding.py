@@ -10,9 +10,9 @@ stem_word = "ding"
 prefix = "co-"
 
 one_word = prefix*3+stem_word
-print(one_word)
+print('Time for', one_word)
 
 new_word = ""
 for i in range(3):
     new_word += prefix
-print((new_word+stem_word))
+print('Time for', new_word+stem_word)
