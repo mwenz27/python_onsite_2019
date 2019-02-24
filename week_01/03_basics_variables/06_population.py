@@ -16,10 +16,8 @@ death = 12
 immigrates = 40
 current_population = 380123456
 
-total_population = round(3*year/ (birth-death+immigrates))
-difference = current_population - total_population
+total_population = current_population + round(3*year/ (birth-death+immigrates))
 
-print(f'In three years the total population is {total_population}')
+print(f'In three years the total population is will be {total_population}')
 
-print(difference)
 
