@@ -12,3 +12,7 @@ l, h, e, o
 For letters that are the same frequency, the order does not matter.
 
 '''
+
+string_ = 'hello'
+print(set(string_))
+

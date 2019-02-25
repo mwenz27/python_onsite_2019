@@ -16,3 +16,5 @@ new_word = ""
 for i in range(3):
     new_word += prefix
 print('Time for', new_word+stem_word)
+
+print(f'time of {"co-"*3}ding')

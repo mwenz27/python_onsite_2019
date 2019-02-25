@@ -14,3 +14,9 @@ counts the number of a’s in 'banana' that uses the in-built 'count'.
 
 
 '''
+
+#help(word.count) # this was was to read the command
+word = 'banana'
+letter = 'a'
+
+print(f'the letter {letter} is in string {word}', word.count(letter), 'times')

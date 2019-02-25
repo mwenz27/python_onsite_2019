@@ -1,9 +1,11 @@
 # Fundamentals Exercise 1: CLI
 
-Perform the following tasks using the CLI and copy and paste
+Perform the following tasks using the CLI paste
 the commands and results below.
 
 - Navigate to your home directory
+cd ~\
+
 - Create a new directory called CodingNomads. We will use this folder
 to house materials for the course.
 - Move into the CodingNomads folder
@@ -32,6 +34,15 @@ to house materials for the course.
 ## explore advanced CLI
 
 - What is the difference between the two commands > and >>?
+> creates a new file
+>> appends on the new file
+
 - Create a file hello.txt with the text "how?!", then append the text
     to another file called my_file.txt
+touch hello.txt
+echo 'how?!' >> hello.txt
+cp hello.txt my_file.txt
+
+ 
 - Overwrite the content of my_file.txt with "tell me"
+echo 'tell me' > my_file.txt

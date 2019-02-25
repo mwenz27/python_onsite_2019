@@ -15,3 +15,18 @@ For this exercise, demonstrate the following string methods below:
 - find
 
 '''
+
+sentence = '  This is a string to test bbb bb  '
+print((sentence.strip()))
+print((sentence.rstrip()))
+print(sentence.lstrip())
+
+print(sentence.replace('s', 'SS'))
+
+print(len(sentence))
+print('\tFind', sentence.find('b')) # find fines the first position on the argument to be seen
+print(sentence[27])
+
+print('\tFind R', sentence.rfind('b')) # finds the first position on the right hand side
+print(sentence[32])
+
