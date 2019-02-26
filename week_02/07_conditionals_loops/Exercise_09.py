@@ -13,3 +13,23 @@ The output should look something like this:
 	10|20|30|40|50|60|70|80|90|100|
 
 '''
+
+new_list = []
+count_list = list(range(10,110,10))
+count = 0
+
+for i in range(1,11): #11 is used since range is inclusive
+    for j in range(i, i*11, i):
+        print(j, end=' |')
+        new_list.append(j)
+        count += 1
+        if count in count_list: #at the end of the row need to break the previoys print function
+            print('')
+
+
+
+
+
+
+
+
