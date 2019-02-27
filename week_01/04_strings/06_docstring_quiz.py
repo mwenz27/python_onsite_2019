@@ -8,19 +8,31 @@ actually does (assuming that the parameter is a string).
 
 '''
 
+# TODO write each docstring
+
 def any_lowercase1(s):
     for c in s:
+        print(c)
         if c.islower():
             return True
         else:
             return False
 
+#print(any_lowercase1('this is a test'))
+#print(any_lowercase1('This Ts a Test'))
+
 def any_lowercase2(s):
+'''
+looks at the letter of the word
+'''
     for c in s:
+        print(c)
         if 'c'.islower():
             return 'True'
         else:
             return 'False'
+
+any_lowercase1('words in a string')
 
 def any_lowercase3(s):
     for c in s:

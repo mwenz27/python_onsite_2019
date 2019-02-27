@@ -3,8 +3,8 @@ A string slice can take a third index that specifies the “step size”;
 that is, the number of spaces between successive characters.
 A step size of 2 means every other character; 3 means every third, etc.
 
->>> fruit = 'banana'
->>> fruit[0:5:2]
+#fruit = 'banana'
+# fruit[0:5:2]
 'bnn'
 
 A step size of -1 goes through the word backwards, so the slice [::-1]
@@ -13,6 +13,7 @@ generates a reversed string.
 Use this idiom to write a much shorter version of the following functions:
 
 ------------------------------------------------------------------------
+
 
 def first(word):
     """Returns the first character of a string."""
@@ -35,3 +36,11 @@ def is_palindrome(word):
     return is_palindrome(middle(word))
 
 '''
+def palindrome(word):
+    if word[:] == word[::-1]:
+        print(f'{word} is a word is printed backwards')
+    else:
+        print(f'{word} is not a backwards word')
+
+palindrome('ana')
+palindrome('babanana')

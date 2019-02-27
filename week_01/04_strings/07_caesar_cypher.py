@@ -18,7 +18,7 @@ character to a numeric code, and chr, which converts numeric codes to
 characters. Letters of the alphabet are encoded in alphabetical order,
 so for example:
 
->>> ord('c') - ord('a')
+ord('c') - ord('a')
 2
 
 Because 'c' is the two-eth letter of the alphabet. But beware:
@@ -29,3 +29,20 @@ ROT13, which is a Caesar cypher with rotation 13. If you are not easily
 offended, find and decode some of them.
 
 '''
+#“cheer” rotated by 7 is “jolly” and “melon” rotated by -10 is “cubed”.
+
+def rotate_word(word, key=1): #setting a reference key
+    new_word = str()
+    for letter in word.lower():
+
+        letter_index = ord(letter)-ord("a") #position in ord list
+
+        if key < 0:
+            key = 26 - ((-key) % 26)  #
+
+        new_word = new_word + chr(ord("a") + ((letter_index + key) % 26)) ## this
+
+    return new_word
+
+print(rotate_word("Melon"))
+print(rotate_word('jolly'))
