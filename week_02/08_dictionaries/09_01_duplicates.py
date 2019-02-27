@@ -29,31 +29,22 @@ for k, v, in words.items():
         print('music')
 
 '''
-
-inputlist = ['a','a','b','c']
-
-def dulipicate_checker(user_list):
+def duplicate_checker(user_list):
     my_dict = {}
+
     for i in user_list:
-        my_dict[i] = 0 #assigns a value to each one
+        my_dict[i] = 0  # assigns a value to each one
     for i in user_list:
         my_dict[i] += 1
 
-    # for i in my_dict: # iterates over keys (also could iterate over values
-    #     if my_dict[i] > 1:
-    #         my_dict[i] = True
-    #     else:
-    #         my_dict[i] = False
-
-    for i in my_dict: # iterates over keys (also could iterate over values
-        print(i)
-        if my_dict[i] > 1:
-            return True
-
-    return False
-
+    for k, v in my_dict.items():  # iterates over keys (also could iterate over values
+        if v > 1:
+            print(f'There is a duplicate word in the list its '{k}' occuring {v} times')
     #print(my_dict)
+    return
 
-dulipicate_checker(inputlist)
+input_list = ['a', 'a', 'b', 'c']
+
+duplicate_checker(input_list)
 
 # TODO review this with debugger

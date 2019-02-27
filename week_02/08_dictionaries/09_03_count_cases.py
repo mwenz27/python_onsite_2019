@@ -18,14 +18,37 @@ Example output:
 
 '''
 
+#iterating starting varibles
+def wordcount(string):
+    upper_count = 0
+    lower_count = 0
+    punt_count = 0
+    punctuation = [",", ".", "!", "?", ":", ";", "(", ")", "'"]
+    number_of_charaters = len(string)
 
+    for letter in string:
+        if letter in punctuation:
+            punt_count += 1
+        elif letter == letter.lower():
+            lower_count += 1
+        elif letter == letter.upper():  # upper case characters
+            upper_count += 1
 
+    new_dict = {}
+    #TODO is there another way to make a dictionary?
 
-string = 'There\'s a difference between knowing the path and Walking the path.'
+    new_dict['Upper case'] = upper_count
+    new_dict['Lower case'] = lower_count
+    new_dict['Punctuation'] = punt_count
+    new_dict['Number of characters'] = number_of_charaters
 
-for letter in string:
-    if i
+    print('Information')
+    for k, v in new_dict.items():
+        print('\t', k, v)
 
+string = 'There\'s a difference, betwEEn knowing the path and Walking the path.'
+
+wordcount(string)
 
 
 
