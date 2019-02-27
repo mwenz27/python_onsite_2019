@@ -21,6 +21,12 @@ Example output:
 
 
 
+string = 'There\'s a difference between knowing the path and Walking the path.'
+
+for letter in string:
+    if i
+
+
 
 
 

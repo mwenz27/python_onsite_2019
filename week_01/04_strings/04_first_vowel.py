@@ -10,9 +10,7 @@ vowels = ['a', 'e', 'i', 'o', 'u']
 count = 0
 tuple_list = []
 
-
 for letters in sentence:
-    #print(letters)
     for vowel in vowels:
         if letters in vowel: # will only pass letters which are in vowels
             #print(letters)
