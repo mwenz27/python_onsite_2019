@@ -13,6 +13,27 @@ For letters that are the same frequency, the order does not matter.
 
 '''
 
-string_ = 'hello'
-print(set(string_))
+string = 'hello'
+
+set_string = set(string)
+#print(set_string)
+
+my_dict = {}
+
+for item in set_string:
+    my_dict[item] = 0
+
+print('First dictionary ', my_dict)
+
+
+for letter in string:
+    if letter in set_string:
+        my_dict[letter] += 1
+    else:
+        pass
+
+sorted(my_dict.items(), key=lambda kv: [1], reverse=False)
+
+print(my_dict.keys())
+
 
