@@ -117,7 +117,7 @@ They caught the last train for the coast
 The day the music died
 And they were singing'''
 
-part_7 ='''They were singing
+part_7 ='''\nThey were singing
 Bye, bye Miss American Pie
 Drove my Chevy to the levee but the levee was dry
 Them good ole boys were drinking whiskey and rye
@@ -125,16 +125,21 @@ Singin' this'll be the day that I die'''
 
 list_song = []
 
-## TODO how to make a name into parts
+# TODO how to make a name into parts
 
-for i in range(1,8):
-    string_name = f'part_{i}'
-    string_name = eval(string_name)
-    print(string_name)
+# for i in range(1,8):
+#     string_name = f'part_{i}'
+#     string_name = eval(string_name)
+#     print(string_name)
 
-list_song_2 = [part_1, part_2, part_3, part_4, part_5, part_6, part_7];
+list_song_2 = [part_1, part_2, part_3, part_4, part_5, part_6, part_7]
 
-for i in list_song_2:
-    print(' ', i)
 
+def song():
+    for i in list_song_2:
+        print(i)
+        print(chorus)
+
+
+song()
 
