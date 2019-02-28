@@ -11,8 +11,9 @@ Write a program with the following three functions:
 
 import time
 
+
 def bark():
-    print('bark bark')
+    return 'bark bark'
 
 
 def eat(food_item, amount=0):
@@ -23,11 +24,24 @@ def eat(food_item, amount=0):
 
 
 def sleep():
-    print('Look here')
+    print('the dogs eating')
     time.sleep(5)
-    print('this printed 5 seconds after')
+    print('the dog is satisfied, thanks for feeding the dog')
 
 
-bark()
-eat('meat', 10)
-sleep()
+flag = True
+
+while flag:
+    print(bark())
+    ans = input('Do you want to feed the dog (y/n): ')
+    if ans == 'y':
+        food = input('What do you want to feed the dog :')
+        amount = int(input('How much do you want to give the dog: '))
+        eat(food, amount)
+        sleep()
+        flag = False
+    else:
+        continue
+
+
+
