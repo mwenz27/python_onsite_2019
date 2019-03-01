@@ -4,10 +4,10 @@ Print the sum to the console.
 
 '''
 x = 0
-sum = 0
+sum_ = 0
 while x <= 99:
     x = x + 1
     print(x)
-    sum += x
+    sum_ += x
 
-print(sum)
+print(sum_)
