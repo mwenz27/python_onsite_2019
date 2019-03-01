@@ -6,15 +6,17 @@ build out the Point class example.
 '''
 
 
-class Point():
-    '''this a doc string'''
-    def __init__(self):
-        self.x = 3
-        self.y = 4
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
+class Rectangle:
+    def __init__(self, width, height, corner):
+        self.width = width
+        self.height = height
+        self.corner = corner
 
-vector = Point()  # using the brackets to call the class
-
-print(vector.x)
-
-print(vector.y)
+    def find_center(self):
+        p = Point()
+        p.x =

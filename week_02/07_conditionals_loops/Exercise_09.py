@@ -18,7 +18,6 @@ new_list = []
 count_list = list(range(10, 110, 10))
 count = 0
 
-
 for i in range(1, 11):  # 11 is used since range is inclusive
     for j in range(i, i * 11, i):
         count += 1
@@ -26,9 +25,7 @@ for i in range(1, 11):  # 11 is used since range is inclusive
             print(j, end='  |')  # Two spaces for one digit
         else:
             print(j, end=' |')  # one space for two digits
-
         if count in count_list:  # at the end of the row need to break the previous print function
             print('')
-
 
 # TODO  the tenth row has no spaces  add a condition to break it up

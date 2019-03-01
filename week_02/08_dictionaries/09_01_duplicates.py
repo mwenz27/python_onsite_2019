@@ -5,7 +5,7 @@ once.
 
 
 '''
-'''
+
 
 words = {}
 words["Hello"] = "Bonjour"
@@ -14,21 +14,6 @@ words["No"] = "Non"
 words["Bye"] = "Au Revoir"
 words['Cool'] = "Bonjour"
 
-print(words)
-
-list_count = []
-
-#print key and values,
-#count values
-#if values > 1 list the
-for k, v, in words.items():
-    #print(k, v)
-    if v in words:
-        print(v)
-    else:
-        print('music')
-
-'''
 def duplicate_checker(user_list):
     my_dict = {}
 
@@ -37,7 +22,7 @@ def duplicate_checker(user_list):
     for i in user_list:
         my_dict[i] += 1
 
-    for k, v in my_dict.items():  # iterates over keys (also could iterate over values
+    for k, v in my_dict.items():  # iterates over keys (also could iterate over values)
         if v > 1:
             print(f'There is a duplicate word in the list its '{k}' occuring {v} times')
     #print(my_dict)
@@ -46,5 +31,6 @@ def duplicate_checker(user_list):
 input_list = ['a', 'a', 'b', 'c']
 
 duplicate_checker(input_list)
+#duplicate_checker(words)
 
 # TODO review this with debugger

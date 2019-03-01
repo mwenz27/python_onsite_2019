@@ -7,7 +7,7 @@ Write a function that takes in a list and finds the max, min, average and sum.
 
 def letsgo():
     input_list = []#float(input('Please enter a list of numbers with spaces ').split())
-    input_list = [ 1.2, 2, 1, 3]
+    input_list = [1.2, 2, 1, 3]
     lmax = max(input_list)
     lmin = min(input_list)
     lsum = sum(input_list)
