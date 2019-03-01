@@ -38,7 +38,7 @@ def is_palindrome(word):
 '''
 def palindrome(word):
     if word[:] == word[::-1]:
-        print(f'{word} is a word is printed backwards')
+        print(f'{word} is a word is printed also backwards')
     else:
         print(f'{word} is not a backwards word')
 
