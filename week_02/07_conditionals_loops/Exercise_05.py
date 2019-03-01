@@ -8,7 +8,16 @@ Take two numbers from the user, an upper and lower bound. Using a loop, calculat
 		The average is: 50.5
 '''
 
-first = 1
-last = 100
 
-for
+def range_sum(lower, upper):
+    total = 0
+    for i in range(lower, upper + 1, 1):  # +1 since range is inclusive
+        total += i
+    average = total / (upper - lower + 1)
+    return print(f'the sum is {total} and average is {round(average, 1)}')
+
+
+x = (input("Enter two numbers with spaces (lower and upper): ")).split()
+
+
+range_sum(int(x[0]), int(x[1]))
