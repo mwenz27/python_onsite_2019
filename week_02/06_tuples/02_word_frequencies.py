@@ -27,11 +27,11 @@ print('First dictionary ', my_dict)
 
 
 for letter in string:
-    if letter in set_string:
+    if letter in my_dict.keys():
         my_dict[letter] += 1
     else:
         pass
-
+print('word freq', my_dict)
 sorted(my_dict.items(), key=lambda kv: [1], reverse=False)
 
 print(my_dict.keys())
