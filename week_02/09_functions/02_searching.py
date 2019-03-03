@@ -12,6 +12,6 @@ def letsgo():
     lmin = min(input_list)
     lsum = sum(input_list)
     laverage = lsum / len(input_list)
-    print(f'List {input_list}\n\tMax {lmax}\n\tMin {lmin}\n\tSum {lsum}\n\tAverage = {laverage}')
+    print(f'List {input_list}\n\tMax = {lmax}\n\tMin = {lmin}\n\tSum = {lsum}\n\tAverage = {laverage}')
 
 letsgo()
