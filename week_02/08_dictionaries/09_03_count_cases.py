@@ -42,7 +42,7 @@ def wordcount(string):
     new_dict['Punctuation'] = punt_count
     new_dict['Number of characters'] = number_of_charaters
 
-    print('Information')
+    print('Information from the string : ', string)
     for k, v in new_dict.items():
         print('\t', k, v)
 
