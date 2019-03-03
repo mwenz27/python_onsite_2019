@@ -3,9 +3,6 @@ Print out every prime number between 1 and 100.
 
 '''
 
-
-# TODO prime numbers
-
 def isprime(n):
     if n <= 1:
         return False
