@@ -2,10 +2,23 @@
 Print out every prime number between 1 and 100.
 
 '''
-for i in range(1, 100):
-    if i % 2 == 0:
-        return i
 
-    print(i)
 
 # TODO prime numbers
+
+def isprime(n):
+    if n <= 1:
+        return False
+    for x in range(2, n):
+        if n % x == 0:
+            return False
+    else:
+        return True
+
+
+def list_primes():
+    for n in range(100):
+        if isprime(n):
+            print(n, end=" ", flush=True)
+
+list_primes()
