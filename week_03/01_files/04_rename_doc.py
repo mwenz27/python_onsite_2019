@@ -15,3 +15,36 @@ Source: Read through the "Files" chapter in Think Python 2e:
 http://greenteapress.com/thinkpython2/html/thinkpython2015.html
 
 '''
+
+
+def sed(pattern, replace, source, dest):
+    """Reads a source file and writes the destination file.
+
+    In each line, replaces pattern with replace.
+
+    pattern: string
+    replace: string
+    source: string filename
+    dest: string filename
+    """
+    try:
+        with open(source, 'r') as fin:
+            lines = fin.readlines()
+
+    except FileNotFoundError as pl:
+        print(f'File not found {pl}')
+
+    new_string = ''
+    for line in lines:
+        new_string += line.replace(pattern, replace)
+
+    with open(dest, 'w') as fir:
+        fir.write(new_string)
+
+    return print('code finished')
+
+
+file = 'rename_file_test'
+file2 = 'modified_file_test'
+
+sed('a', 'AAAAA', file, file2)

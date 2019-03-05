@@ -18,3 +18,24 @@ Source: Read through the "Files" chapter in Think Python 2e:
 http://greenteapress.com/thinkpython2/html/thinkpython2015.html
 
 '''
+
+import os
+
+#find directory
+
+path = '/Users/Wenz/Desktop/screenshots'
+
+#create a list to compare the files with eachother,
+
+print(os.path.abspath(path))
+
+data_list = []
+
+for root, dirs, files in os.walk(path):
+    for filename in files:
+        data_list.append(filename)
+
+#use md5check sum to compare the values of files
+
+#if the md5checksum is true print duplicates
+
