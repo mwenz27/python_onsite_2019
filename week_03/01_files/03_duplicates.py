@@ -21,6 +21,10 @@ http://greenteapress.com/thinkpython2/html/thinkpython2015.html
 
 import os
 
+from md5checksum import *
+
+
+from md5checker import make_hash
 import md5checker
 
 #find directory
@@ -30,7 +34,7 @@ path = '/Users/Wenz/Desktop/screenshots'
 
 #create a list to compare the files with eachother,
 
-print(os.path.abspath(path))
+# print(os.path.abspath(path))
 
 
 
@@ -38,11 +42,11 @@ data_list = []
 
 data_list_dictionary = {}
 
-
 for root, dirs, files in os.walk(path):
-
     for filename in files:
         data_list.append(filename)
+        # print(filename)
+        #print(compute_checksum(filename))
         #command = f"md5 -r '{os.(filename)}' "
 
 
@@ -52,18 +56,37 @@ for (dirpath, dirnames, filenames) in os.walk(path):
     #print(dirpath, dirnames, filenames)
     list_of_files += [os.path.join(dirpath, file) for file in filenames]
 
+print(list_of_files[0])
 
-print(len('a64561d4c0d4fc21a24d9f080447f6de'))
+
+
+#print(len('a64561d4c0d4fc21a24d9f080447f6de'))
 # Create a dictionary
+
+file_dict = {}
 
 os.chdir(path)
 for file in list_of_files:
     hash_file = make_hash(file, algo='sha1')
-    print(hash_file)
-
-
+    file_dict[file] = hash_file
 
 # use md5check sum to compare the values of files
+
+list_of_duplicates = []
+
+for k1, v1 in file_dict.items():
+    k = k1
+    v = v1
+    for k2, v2 in file_dict.items():
+        if v == v2 and k != k2:
+            list_of_duplicates.append(k)
+            list_of_duplicates.append(k2)
+
+for i in list_of_duplicates:
+    print(i, make_hash(i))
+
+
+
 # for file in list_of_files:
 #     command = f"md5 -r '{file}'"
 #     print(command)
@@ -75,7 +98,7 @@ for file in list_of_files:
 #     # print(hash_name)
 #     #print(type(hash_and_file_name))
 
-print(hash_2)
+
 
 
 
