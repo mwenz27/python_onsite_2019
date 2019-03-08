@@ -1,0 +1,415 @@
+Please attempt these questions without the book and without using the
+internet. Yes, you heard right! - this is the real thing!
+Ah, and another thing... - only use Vim (or paper ;) for coding!
+
+Remember that these questions are meant to be both a revisit as well
+as a checkup for yourself to see which topics come easier and which
+ones need some more focus. Take your time, and have fun! :)
+Also: don't be too hard on yourself if there's something you don't know
+yet. All of you are doing great, everyone learns differently and at a
+Different speed. You're well on your way!
+Take note of what comes difficultly, and come back to revisit it later.
+Learning to code is a marathon, not a sprint!
+
+I also want you to remember far you've already come in only three weeks,
+and that learning simply takes time and practice.
+Ok that's all, now let's get to practicing!! :)
+
+========================================================================
+
+- Using the command line, how do you:
+    - change directories? 				cd into the directory
+    - list the contents of a folder? 			ls -al
+    - print the path of the current directory?		pwd
+    - move a file from one location to the another?	mv distination to next destination
+    - copy a file from one location to another?		cp distination
+    - create a file?					touch file
+    - create a folder?					mkdir folder
+    - delete a file?					rm -f
+    - delete a folder?					rm -rf (recurvile forced) rmdir
+    - delete a folder that contains a file?		rm -rf
+    - print the contents of a file?			using cat, more, head
+    - edit the contents of a file?			using vim 
+
+- Answer the following question about Git and Github:
+    - What is a branch?
+    a branch is a referenced to a starting point which can be split into different versions
+    - What is a remote?
+    remote are the locations to where the files is located
+
+- What are the commands to do the following?
+    - initialize a git repository			git init
+    - clone a repository from Github			git clone (repository)
+    - add a file to the staging area			git add file (or . for everything) 
+    - make a commit					git commit -m 'comment message'
+    - push to Github					git push remote branch
+    - pull from Github					git git pull remote branch
+    - see the names of the branches			git branch
+    - see the names of the remotes			git remote -v 
+    - add a new remote				git remote add <remote_name> <url>
+
+- Describe a variable and a value through their relationship.
+variable is a item stored to that name, the item can be called a value
+variable name is assigned to a value
+
+- What are five common data types in Python?
+list, dictionaries, tuples, strings, bool, int, set
+
+- What is the difference between an expression and a statement?
+expressions valuates to something
+statement is something
+an expression is a set of arguments, while a statement reference
+
+- What are relational operators?					> , <  =
+
+- What is the difference between == and = ?
+
+== is equals for a expression, and = is a assignment operator
+
+- Demonstrate the use of an if/elif/else conditional.			
+
+while x != 10:
+	x = int(input('set a value')
+	if x == 4:
+		print('this is four')
+	elif x == 7:
+		print('this is seven')
+	else:
+		print(' its not 4 or 7')
+
+- What does mean to have a function that "takes" an argument?
+
+it means that there is a parameter which is inserted to the function,
+the function computes the parameter and creates an output
+
+def f(paramter):
+    return
+ a = f(argument)
+
+- What is a return value?
+Calling a function
+when running a function calls a final output, in this case it can hold a value
+it comes out of the functions
+
+- How do you import a class to one of your programs?
+
+from file import Class
+
+- Do parameters and variables inside of a function exist outside of it?
+Why or why not?
+
+no, its a local variable working within the function
+
+
+- What is the difference between a "fruitful" function and a void function?
+
+fruitful functions returns a value
+
+- What does a void function always return in Python?
+
+returns Non
+
+- What are some of the reasons we separate our code into functions?
+
+can save a lot of repetition 
+
+- What is the difference between the following two statements?
+    import math
+    <and>
+    from math import *  		This imports all methods in the file
+    <and>
+    import math as m			this renames the method to a abbervation
+
+    How can you use the functions of the math module in each case?
+
+			math.pi()
+
+			pi()
+
+			m.pi()
+
+- What is an index?			
+
+index is a position of data structure in a order
+ starting from zero in some iterable
+
+- How do you use slicing to produce the string "coding" from the string
+"I love coding!!!"?
+
+string = 'coding'
+
+new_string = 'I love ' string[7:13]
+
+- How do you invoke the replace() method on the string
+'coding is the best' to replace all 's' characters with 'z' characters?
+
+string = 'coding is the best'
+
+new_string = string.replace('s', 'z')
+
+
+- What is the most important difference between a list and a string?
+
+list is mutable
+strings are immutable
+
+
+- How do you use a delimiter other than a whitespace with the split() method?
+example split -  string.split('-')
+
+
+- If two objects are identical, does that also make them equivalent?
+Why or why not? How can you prove it in code?
+
+a is b memory
+a == b value
+
+its possible to check the ID
+
+
+
+- What is it called when an object has more than one reference to it?
+alaising
+
+
+- How do you add an item to the dictionary first_dict using square
+    brackets?
+
+first_dict['key'] = value
+
+- Write an example for-loop to traverse a dictionary loop_dict and
+    print out the keys and values.
+
+for k, v in loop_dict.items():
+	print(k, v) unpacking
+
+
+- What are the three primary tenants of Object Oriented Programming (OOP)?
+
+Enscapsulations attibtues and methods
+inhertance
+polymorthism change the the methods and attributes
+
+- Why is OOP useful?
+its intunative way of describing a object
+
+the data is package up with the real word.
+
+items in the environments has have inhersti properties
+
+- What is a class?
+Is a blueprint in which objects,
+a class a spefic properites to the object
+
+- What are class attributes?
+
+when an object is exist, the object has assigned attributes
+
+- What does it mean when an object is embedded?
+
+created in a object
+
+- How is a method different than a function?
+
+a function is a way of calling something
+
+a method gets called with a '.'
+
+when the object is created
+
+
+- What is the `__init__` method and what is it used for?
+
+is applied with iniitialise in the instance of the class
+
+its a dunder method to initail the attibrutes in the class
+
+
+- Give an example `__init__` method for a `Car` class with attributes:
+`make`, `model` and `year`.
+
+class Car:
+	def __init__(self, make, model, year)
+		self.make = make
+		self.model = model
+		self.year = year
+
+- How does a class inherit from another class?
+
+Classes can be inherited but using the super()
+
+class ElectricCar(Car):
+	super().__init__(make, model, year)
+
+- Explain the difference between a class attribute and an instance attribute.
+class attribute		all objects are have the classes 	
+instance attribute	an object its own specfice attrube for that one instance
+
+
+- How do you open a file in write mode? Write some example code below.
+
+with open(file, 'w') as fout:
+	fout.write('string')
+
+
+- Can you have a 'try' without an 'except'? Can you have an 'except' without
+a 'try'? Bonus: How does 'else' fit into this picture?
+
+no try and except are required combinations
+
+using a else statement after a exept is a another codition to say likse a pass if there is no errors
+
+
+- Why is the following code bad form?
+
+    try:
+        print(10/0)
+    except Exception as exc:  # this catches anyexpection
+        print(exc)
+    except ZeroDivisionError as zde:
+        print zde
+
+
+# TODO 
+just the brackets?, its important to be very specfic on the error, the zero division error shoudl be on the top
+
+- Write a function that takes in the name of a file, reads the contents
+of that file word by word and places each word in a list, then prints
+the list to the console.
+
+
+with open('file', 'r') as fiw:
+	contents = fiw,read()
+for line in contents:
+
+	print(line.strip())
+
+- Create a custom exception below.
+
+- Write a very simple function that demonstrates raising the exception from the
+previous question.
+
+def MyException(Exception):
+    pass
+
+
+
+- Explain the following keywords:
+    -try		when in the the block compute something
+    -except		if there is a error message/do something
+    -raise 		in a loop call this exceptions
+    -else		continue with a condition and check the next condition
+    -finally		message/do something till the very end
+    -return		when reached call none, if nothing is assigned to it
+    -break		when the condition is met break the line
+    -continue		when a function runs, hold the varible and pass through the script jumps back on the loop
+
+try:
+	x = a
+	y = b
+	z = a/b
+except ZeroDivisionError as err:
+	print(err)
+
+else:
+	print(z)
+finallyL
+	print('this is the end')
+
+
+
+- When should you throw an exception rather than catch the exception?
+
+throw means raise, it breaks straight away
+
+catching can continue
+
+when user input and datasets are inserted and not formatted
+
+## TODO
+
+- Demonstrate a while loop, and a for loop, that print out every other
+odd number between 1000 and 0 in a descending order:
+
+x = 0
+
+while x <= 1000:
+	x -= -1
+	if x % 2 != 0:
+		print(x, end= "")
+
+if x == 0:
+	break		
+
+- How comfortable do you feel answering the questions above?
+
+- How do you create and activate a virtual environment?
+
+python3 -m venv .env
+
+source .env/bin/activate
+
+- What is the variable __name__ used for?
+
+string of the name spaced
+
+- Write code that prints out all items passed to a function.
+The amount of items should be able to be different for every function call.
+
+
+========================================================================
+
+
+Congrats, good job for getting all the way to the end! :D
+Here's a picture of an island for you: 🏝
+
+Look at it and relaxxxxxxxxxxxxxxxxxx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Wait, you want more?
+
+...
+
+
+
+========================================================================
+** ok: we didn't go over these topics yet, but you can take a guess ;) **
+========================================================================
+
+- Write a list comprehension to add 1 to all items in a list of
+integers called "list_"
+
+- What does enumerate() do?
+
+- You have an object that prints "<generator object <genexpr> at 0x104150eb8>"
+to the console. How can you access its values?
+
+- What is the advantage of using a generator object compared to a list?
+
+- What are the key (conceptual) points when constructing a decorator
+function? What does it need to do?
+
+- When are decorator functions useful?
+
+- What happens when you use the @decorator syntax when defining a function?
+
+
