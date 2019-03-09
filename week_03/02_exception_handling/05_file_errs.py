@@ -6,3 +6,10 @@ with specific except statements, and continue to do the calculation
 only if neither of them applies.
 
 '''
+
+file = 'integers.txt'
+with open(file, 'r') as fir:
+    contents = fir.readlines()
+
+
+print([lambda line: line in contents])

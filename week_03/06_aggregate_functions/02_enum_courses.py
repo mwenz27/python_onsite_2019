@@ -11,3 +11,5 @@ for i in range(len(courses)):
 '''
 
 classes = ['Intro', 'Intermediate', 'Advanced', 'Epic Hero']
+for c, v in enumerate(classes):
+    print(c, v)

@@ -7,3 +7,5 @@ Tip: Use an if statement in the listcomp
 '''
 
 fish_tuple = ('blowfish', 'clownfish', 'catfish', 'octopus')
+listcomp = [name for name in fish_tuple if 'fish' in name]
+print(listcomp)
