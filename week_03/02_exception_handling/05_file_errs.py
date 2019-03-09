@@ -16,16 +16,19 @@ except IOError as err:
     print('First block', err)
 
 
-if len(contents) % 2 == 0:
-    pair_list = list(range(0, len(contents), 2))
-    for i in pair_list:
-        try:
-            num = int(contents[i].rstrip() + contents[i+1].rstrip())
-            num = num**2
-        except ValueError as err:
-            print('Second block ', err)
-        else:
-            print(num, end=" ")
+if len(contents) % 2 != 0:
+    uneven = 1
+    contents.append(un)
+
+pair_list = list(range(0, len(contents), 2))
+for i in pair_list:
+    try:
+        num = int(contents[i].rstrip() + contents[i+1].rstrip())
+        num = num**2
+    except ValueError as err:
+        print('Second block ', err)  # the file has 2 strings on the end of file will make an error
+    else:
+        print(num, end=" ")
 
 
 
