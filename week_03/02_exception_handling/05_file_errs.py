@@ -8,8 +8,25 @@ only if neither of them applies.
 '''
 
 file = 'integers.txt'
-with open(file, 'r') as fir:
-    contents = fir.readlines()
+
+try:
+    with open(file, 'r') as fir:
+        contents = fir.readlines()
+except IOError as err:
+    print('First block', err)
 
 
-print([lambda line: line in contents])
+if len(contents) % 2 == 0:
+    pair_list = list(range(0, len(contents), 2))
+    for i in pair_list:
+        try:
+            num = int(contents[i].rstrip() + contents[i+1].rstrip())
+            num = num**2
+        except ValueError as err:
+            print('Second block ', err)
+        else:
+            print(num, end=" ")
+
+
+
+# print([lambda line: line in contents])

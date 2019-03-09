@@ -9,3 +9,16 @@ Test it and make sure it does not crash when you enter incorrect values.
 
 '''
 
+
+try:
+    a = int(input('Enter Number 1 : '))
+    b = int(input('Enter Number 2 : '))
+except TypeError as err:
+    print(err)
+
+try:
+    c = a / b
+except ZeroDivisionError as err:
+    print(err)
+else:
+    print(c)
