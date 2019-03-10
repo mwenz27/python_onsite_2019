@@ -3,10 +3,12 @@ Write a script with a function that demonstrates the use of *args.
 
 '''
 
+
 def pizza(*args):
-    print('Pizza toppings :')
+    string = 'Pizza toppings :\n'
     for items in args:
-        print(f'\t-{items}')
+        string += f'\t-{items}\n'
+    return print(string)
 
 
 pizza('cheese', 'ham', 'pineapple', 'mushroom')
