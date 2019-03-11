@@ -9,4 +9,4 @@ def pizza(**kwargs):
         print(f'\t - {k}: {v}')
 
 
-pizza(cheese=12, ham=21, pineapple=23, mushroom=65)
+pizza(cheese=12, ham=21, pineapple=23, mushroom=65, chicken=True)

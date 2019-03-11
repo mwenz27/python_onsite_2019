@@ -11,3 +11,7 @@ sizes = ["S", "M", "L"]
 
 x = [ (i,j) for i in colors for j in sizes ]
 print(x)
+
+
+
+

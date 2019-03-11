@@ -9,10 +9,11 @@ for letter in 'suchalongword':
 print(letters)
 
 '''
-# letters = []
-# for letter in 'suchalongword':
-#     letters.append(letter)
-# print(letters)
+x = []
+for letter in 'suchalongword':
+    x.append(letter)
+print(x)
 
-x = [i for i in 'suchalongword']
+x = [letter for letter in 'suchalongword']
+
 print(x)

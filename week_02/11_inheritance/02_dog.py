@@ -8,3 +8,6 @@ Create and object of this class and demonstrate it's functionality.
 
 '''
 
+import random
+
+print(random.randint(1,100))

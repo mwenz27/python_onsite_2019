@@ -16,7 +16,7 @@ try:
 
 except FileNotFoundError as fnf:
     print(fnf)
-except PermissionErroras as err:
+except PermissionError as err:
 
 else:
     try:

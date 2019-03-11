@@ -18,3 +18,16 @@ famous_quotes = [
     {"full_name": "Nathan Myhrvold", "quote": "Software is a gas; it expands to fill its container."},
     {"full_name": "Alan Bennett", "quote": "Standards are always out of date.  That’s what makes them standards."}
 ]
+
+for i in range(len(famous_quotes)): # the length of the famous quotes
+    x = famous_quotes[i]['full_name'].split() # breaking the name into a list
+    list_length = len(x)
+    #print(list_length)
+    #print(x)
+    if list_length == 2: # if there are 2 characters in the surname
+        surname_first = x[1] + ' ' + x[0]
+        print(f"'{famous_quotes[i]['quote']}' - {surname_first} \n ")
+    elif list_length == 3: # if there are 3 characters in the surname
+        surname_first = x[2] + ' ' + x[1] + ' ' + x[0]
+        print(f"'{famous_quotes[i]['quote']}' - {surname_first} \n ")
+
