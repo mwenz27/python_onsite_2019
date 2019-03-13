@@ -1,3 +1,35 @@
 1
 attribute of an HTML element
 
+<section class='content'></section>
+
+advantages of using classes
+ -unify elements
+ -assign e.g style
+ - maintain
+
+ <p class="main content"><\p>  there is a space to which makes 2 classes, the content would be overide
+ the main class
+ <p class="main-content"><\p>  this is one class
+
+
+creating classes for css
+
+p(this is the selector) { color(property) : red (value) ;(close)
+}
+
+change all highlights red
+
+.highlight (the dot is required {
+            color : red;
+}
+
+change all highlights  child elements red
+
+.highlight > (the dot is required {
+            color : red;
+}
+
+two steps nessary to to be able
+1. link to bootstrap get line
+2.
