@@ -1,0 +1,25 @@
+html css js
+
+javascript
+
+<html> <style> <script>
+
+<meta> found in the head
+
+web scrapping retriving content
+web crawling automated  retriving content, going through links
+parsing - selected text
+
+Session() request a login, stores a peice of information
+
+get() HTML requests and response object
+
+get()  -
+post() - say login
+.render() javascript code
+
+
+get - receive something
+post - send something
+put - editing
+delete = remove somethings
