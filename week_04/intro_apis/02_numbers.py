@@ -14,3 +14,30 @@ BONUS:
   - etc. (cycle back to the trivia after year)
 
 '''
+import requests
+import time
+
+params = {
+    'type' : 'trivia',
+    'notfound': 'floor'
+}
+
+with open('numbers_api_0-100.txt', 'a') as fiw: #Opening brackets
+    fiw.write('{')
+
+for i in range(100):
+    num = i
+    url = f"http://numbersapi.com/{num}?{'&'.join(f'{k}={v}' for k, v in params.items())}"
+    time.sleep(2) # sleeping before request to not get a bad gateway
+    r = requests.get(url)
+    with open('numbers_api_0-100.txt', 'a') as fiw: #
+        fiw.write(r.text+'\n')
+
+with open('numbers_api_0-100.txt', 'a') as fiw: #Closing brackets
+    fiw.write('}')
+
+## slice i characters to the right
+
+# add colon in the middle
+
+# add the value by using a key value pari

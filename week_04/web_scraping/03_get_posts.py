@@ -14,3 +14,44 @@ BONUS: use pagination features to retrieve all posts of all pages in the group
 
 '''
 
+from requests_html import HTMLSession
+
+payload = {'username': 'martin-martin', 'pass':  'bali2019'}
+
+url = 'https://my.freecycle.org/login'
+
+session = HTMLSession()
+
+r = session.post(url, data=payload)
+
+print(r)
+# print(r.search('Denver', r.text))
+
+# print(r.html.text.find('Denver'))
+
+
+for link in r.html.absolute_links:
+    if link.endswith('DenverCO'):
+        url = link
+
+# print(url)
+
+# r = session.get(url)
+#
+# print(r.text)
+
+c1_titles = r.html.find('.candy1')
+c2_titles = r.html.find('.candy2')
+
+# a  {}
+# div {}
+# class  uses the dot for html elements
+# use the hashtag id = name
+
+
+all_titles = c1_titles + c2_titles
+
+
+with open('denver_posts.txt', 'a') as fiw:
+    for i in all_titles:
+        fiw.write(i.text)
