@@ -1,0 +1,31 @@
+difference website URL and API Url
+
+difference is due HTML, JS CSS, and API is JSON and XML
+
+4 most common HTTP methods?
+
+GET
+PULL
+POST - Sending data
+PUT - editing data, going to and excisting resource and changing it
+DELETE
+
+Create - POST
+Read - GET
+Update - PUT
+Delete - DELETE
+
+API documentation
+
+http://numbersapi.com/222?type=trivia&notfound=floor(&json)
+
+http://numbersapi.com/222?type=trivia&notfound=floor(&json)
+? - the query
+
+
+protocal domain path query key and values conditions end with json
+
+
+what type of request does browswer preform when your searchbar
+
+GET request

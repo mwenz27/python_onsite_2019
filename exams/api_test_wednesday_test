@@ -1,0 +1,11 @@
+API interaction
+
+-API key
+-ID Channel
+
+-pip install slackclient
+
+python code
+from slackclient import SlackClient
+1) create
+
