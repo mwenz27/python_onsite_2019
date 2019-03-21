@@ -1,0 +1,11 @@
+- Import the dvdrental schema and data to your postgresql
+ database from the command line.
+
+First install Postgres
+then install pgAdmin4
+
+download the dvdrental.tar file which will have the databases
+
+cd /Applications/Postgres.app/Contents/Versions/latest/bin/
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+pg_restore -U Wenz -d dvdrentals /Users/Wenz/Desktop/database/dvdrental.tar

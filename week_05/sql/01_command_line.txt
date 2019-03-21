@@ -1,0 +1,17 @@
+From the command line, log on to your postgresql server and do the following.
+Copy the commands you used to this file:
+
+- list all the users on the server
+\du
+- show all the databases
+
+- connect to the dvdrental database
+
+- list all of the tables in the dvdrental database
+
+To view help for psql commands, type \?.
+To view help for SQL commands, type \h.
+To view information about the current database connection, type \conninfo.
+To list the database's tables and their respective owners, type \dt.
+To list all of the tables, views, and sequences in the database, type \z.
+To exit the psql program, type \q.

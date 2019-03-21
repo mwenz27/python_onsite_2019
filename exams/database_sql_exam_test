@@ -1,0 +1,61 @@
+-what is a relational database?
+
+data is stored in tables,
+ no duplicates
+ its flexible
+ able to index to link other tables
+
+every record is a row
+
+no relational database -
+
+database which can be ID
+
+difference
+
+data is stored in tables
+
+it links databases, with accioated indexs
+
+SELECT * FROM names;
+
+-what is SQL query t create a inner join on two tables
+
+JOIN (inner join)
+'''
+SELECT Orders.OrderID, Customers.CustomerName
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+'''
+
+'''
+SELECT {column},
+FROM table1 AS t1
+INNER JOIN table AS t2
+ON t1.id = t2.t1_id;
+
+'''
+
+
+
+explain the pieces of the query and why we need to set it up like that?
+
+-- what are double quotes in Progres
+can be used for the column of the table
+
+if the data names use uppercase and has spaces as querys "ID" or "this item" if they are bothe columns
+
+
+what are single quotes in Postgres
+
+single
+
+how do you list databes in psql
+
+\dl
+\l
+
+after start psql what two steps do you need to do to see all the table anems of a databse called
+'dvdrentals'
+\c <database name, dvdrentals>
+\dt
