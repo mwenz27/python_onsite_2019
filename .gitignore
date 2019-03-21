@@ -1,2 +1,5 @@
 .idea
 venv
+secrets.py
+secrets2.py
+secrets3.py

@@ -29,10 +29,10 @@ right click on the database and then press create_database
 - Write the SQL queries to accomplish the following: (write each of your queries below for review)
 
     - select all records from users
-
+       SELECT * FROM users;
 
     - select all records from cars where car make = "Toyota"
-
+       SELECT (make='toyota') FROM cars;
 
     - use a join to select the first name and car model of every user who has bought a car
 
