@@ -1,0 +1,59 @@
+-What is an ORM and why is it useful?
+
+this library is used as an Object Relational Mapper (ORM) tool
+that translates Python classes to tables on relational databases and
+ automatically converts function calls to SQL statements
+
+ works on all sorts of databases
+
+-When using SQL'Achemy what part of the code do you need to change when switching
+
+Connection String = DATABASE_URI
+
+    db1 = create_engine('postgresql://user1:password1@host1/dbname1')
+    db2 = create_engine('mysql://user2:password2@host2/dbname2')
+
+    DB1Session = sessionmaker(db1)
+    DB2Session = sessionmaker(db2)
+    db1session = DB1Session()
+    db2session = DB2Session()
+
+Translate SELECT * FROM actors
+
+code
+
+'''
+from sqlalchemy import create_engine, MetaData
+from sqlalchemy import Table, Column, Integer, String, SmallInteger
+from secrets3 import config
+
+username = config['host']['username']
+DATABASE_URI = f'postgres+psycopg2://{username}@localhost:5432/speedforce'
+
+print(DATABASE_URI)
+
+engine = create_engine(DATABASE_URI, echo=True)
+connection = engine.connect()
+metadata = MetaData()
+
+
+query = sqa.select([actor])
+'''
+
+
+how can you select only speific columns of
+
+
+SELECT actors.names, actors.age, F
+
+- create a table
+
+
+test = Table('test', metadata,
+             Column('id', Integer(), autoincrement=True, primary_key=True),
+             Column('quote', String(255), nullable=False),
+             Column('year', Integer()),
+             Column('is_great', Boolean, default=False)
+             )
+
+autoincrement=True, primary_key=True
