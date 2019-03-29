@@ -1,0 +1,47 @@
+1) the first place is the urls page
+
+2) in the urls page
+
+3) from urls,   views--> functions---->template
+
+
+
+4) in the views
+
+5)  request djggo specific like a http request
+
+6) the request of the HTML pages, render (request, 'index'
+
+7) the objects
+
+topic = Topic.objects.get(id=topic_id)
+topic = Topic.objects.all()
+
+
+
+8) template inheritance reqires the block of the code {% %}
+
+9) through the admin  or usuing SQL aclibmey
+
+10) through migrations?
+
+11) code logic is usings {{% %}}
+
+12)
+
+{% block content %}
+  <p>Topic: {{ topic }}</p>
+  <p>Entries:</p>
+  <ul>
+  {% for entry in entries %}
+    <li>
+      <p>{{ entry.date_added|date:'M d, Y H:i' }}</p>
+      <p>{{ entry.text|linebreaks }}</p>
+    </li>
+  {% empty %}
+    <li>
+      There are no entries for this topic yet.
+    </li>
+  {% endfor %}
+  </ul>
+{% endblock content %}

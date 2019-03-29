@@ -1,0 +1,61 @@
+Why do we want to use a web framework?
+
+
+Explain the general concept of MVC
+MVC model View (client which means view)
+MTV
+
+
+how do these concepts map to different parts of Django?
+models.py
+template.py
+
+Explain the necessary steps to create  a basic Django project
+
+1 create a viruatl enviroment
+
+2 source vnv
+3 pip install django
+4 create a app django admin startproject
+5 run the server, python manage.py runseverver
+
+
+in the models create a class
+start the initial migration
+run the migration
+
+what is the differece between a Django project and Djando app
+the project is a higher level which contains the app
+
+what advantage does the the app-centric structure in the Django have?
+its modular
+
+which file do we add database model in?
+models.py
+
+define a Django model for a a blog post at contains 4 feileds.
+
+import model
+
+class Entry(models.Model):
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE)  # if we delete the topics we don't want the comments
+    Text = models.Text
+    Title = models.TextField()
+    author = models.CharField( max_length = 200)
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+
+how can you make the outpust in the Django easily readable
+
+make migrations - is like a commit if there are changes to the database
+
+
+SQL Lite is just a file not a server
+
+
+create superuser
+
+import the models
