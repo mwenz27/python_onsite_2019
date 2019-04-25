@@ -1,0 +1,113 @@
+HEROKU DEPLOYMENT / SWITCHING DJANGO'S DB BACKEND
+=================================================
+
+1) High level steps to get our project up and running on Heroku
+
+install heroku command app - its a program which runs on bash
+
+Step 1. Create a Procfile in your project root.
+
+Procfile
+
+web: gunicorn project_name.wsgi
+
+
+pip install apps
+# login to your heroku
+heroku login
+# create new app if one doesn't yet exist
+heroku create
+
+# create a new postgres database for your app
+
+# migrate your database to the heroku app
+
+
+
+add data commands app/settings.py
+
+import django_heroku
+django_heroku.settings(locals())
+
+
+2) What do we need to prepend to a python command in order to
+run code remotely on a Heroku server?
+
+hero run
+
+
+3) What does a database connection string consist of?
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "learninglogs_db",
+        "USER": "Wenz",
+        "PASSWORD": "",
+        "HOST": "localhost",
+        "PORT": "5432",
+    }
+}
+When your application connects to a database or a data file you let ADO or ADO.Net
+utilize a provider to do the job for you. The connection string contains the information
+that the provider need to know to be able to establish a connection to the database or the
+data file.
+
+4) Where do the parts of Q3 go in Django?
+
+settings.py
+
+
+5) High level steps to migrate a DB from SQLite to Postgres
+
+Dump existing data:
+
+python3 manage.py dumpdata > datadump.json
+Change settings.py to Postgres backend.
+
+Make sure you can connect on PostgreSQL. Then:
+
+python3 manage.py migrate --run-syncdb
+Run this on Django shell to exclude contentype data
+
+python3 manage.py shell
+>>> from django.contrib.contenttypes.models import ContentType
+>>> ContentType.objects.all().delete()
+>>> quit()
+Finally:
+
+
+
+run heroku  python3 manage.py loaddata datadump.json
+
+
+
+YOUR QUESTIONS
+==============
+
+3) BLAKE: Working with different branches and pushing to Heroku, how can we guarantee uptime?
+
+
+run heroku git checkout -b [name_of_your_new_branch]
+
+
+5) MING: After changing data ownership permissions, what steps you need to follow to make
+	that reflected in your app?
+
+
+
+
+7) ROBERT:
+	* How to use static files (CSS, JS) with Django on a server?
+	* How to push your database information up to a remote DB on Heroku?
+
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR
+
+
+
+10: ARNO: How do you handle your SECRET_KEY with Heroku?

@@ -5,3 +5,15 @@ secrets2.py
 secrets3.py
 slack_jason_dump.txt
 __pycache__
+05b_coinmarket_cap.py
+coinmarket_cap_file.json
+swagger.json
+.DS_Store
+python_read_json.py
+.gitignore
+exams/
+__pycache__
+*secrets3*
+05_time_btc-price_10_min_10_sec_int.txt
+04_chucknorris_text_file.txt
+.DS_Store

@@ -15,3 +15,51 @@ BONUS: Explore the logging package for easier tracking
 
 '''
 
+from secrets3 import config
+import requests
+import time
+
+import urllib.request
+
+from pprint import pprint
+
+key = config['nomic']
+
+# url = f"https://api.nomics.com/v1/prices?{key}"
+# print(urllib.request.urlopen(url).read())
+
+
+# url = "https://api.nomics.com/v1/markets/prices?key=" + key   # "&currency=BTC"
+# prices = requests.get(url)
+# pprint(prices.json())
+
+
+
+
+import nomics
+api_key = key
+nomics = nomics.Nomics(api_key)
+
+# x = nomics.get_prices()
+# pprint(x) #prints all currency pairs
+
+time_minutes = 3
+time_seconds = time_minutes*60
+time_count = 0
+btc_dict = {}
+while time_count != time_seconds:
+    x = nomics.get_prices()
+    time_stamp = time.time()
+    time.sleep(10)
+    with open('05_time_btc-price_10_min_10_sec_int.txt', 'a') as fout:
+        for currency_price in x:
+            if currency_price['currency'] == 'BTC':
+                # print(time_stamp, currency_price['price'])
+                line = str(time_stamp)+" "+str(currency_price['price'])
+                fout.write(line + "\n")
+                time_count += 10
+                btc_dict[time_stamp] = currency_price['price']
+
+max_value = max(btc_dict.values())
+min_value = min(btc_dict.values())
+print('BTC MIN/MAX values are ', min_value,'/', max_value)

@@ -34,7 +34,7 @@ def compareTwoCities():
         print(all_data[city1_index]['name'], 'has a higher population', all_data[city2_index]['name'], f'by {pop1 - pop2} people')
         print('The native name is', all_data[city1_index]['nativeName'], 'and the capital is', all_data[city1_index]['capital'], '\n')
     else:
-        print(all_data[city2_index]['name'], all_data[city1_index]['population'], 'has a higher population',  all_data[city1_index]['name'], f'by {pop2 - pop1} peopleR')
+        print(all_data[city2_index]['name'], all_data[city1_index]['population'], 'has a higher population',  all_data[city1_index]['name'], f'by {pop2 - pop1} people')
         print('The native name is', all_data[city2_index]['nativeName'], 'and the capital is', all_data[city2_index]['capital'], '\n')
 
 
